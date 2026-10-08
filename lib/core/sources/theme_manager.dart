@@ -5,6 +5,16 @@ import 'package:google_fonts/google_fonts.dart';
 class ThemeManager {
   static final ThemeData light = ThemeData(
     scaffoldBackgroundColor: ColorsManager.whiteF4,
+    bottomNavigationBarTheme: const BottomNavigationBarThemeData(
+      type:BottomNavigationBarType.fixed,
+      backgroundColor: ColorsManager.white,
+        selectedItemColor: ColorsManager.darkBlue,
+      unselectedItemColor: ColorsManager.grey,
+
+      selectedLabelStyle: TextStyle(decoration: TextDecoration.none),
+      unselectedLabelStyle: TextStyle(decoration: TextDecoration.none)
+
+    ),
     elevatedButtonTheme: ElevatedButtonThemeData(
       style: ElevatedButton.styleFrom(
         backgroundColor: ColorsManager.darkBlue,
@@ -46,9 +56,12 @@ class ThemeManager {
         fontSize: 14,
         fontWeight: FontWeight.w600,
         color: ColorsManager.darkGrey,
+        decoration: TextDecoration.none
         
 
       ),
+
+
       bodyMedium: GoogleFonts.poppins(decoration: TextDecoration.underline,fontSize: 14,fontWeight: FontWeight.w500,color: ColorsManager.darkBlue)
     ),
   );
